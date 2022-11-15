@@ -66,7 +66,7 @@ public class DepartmentDaoJDBC implements DepartmentDao {
 					+ "WHERE Id = ?", Statement.RETURN_GENERATED_KEYS);
 			
 			st.setString(1, obj.getName());
-			st.setInt(2, 7);
+			st.setInt(2, obj.getId());
 
 			int rowsAffected = st.executeUpdate();
 			
